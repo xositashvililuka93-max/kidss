@@ -504,3 +504,29 @@
         padding: 20px;
     }
 }
+
+.detail-add-button {
+    width: min(100%, 320px);
+    min-height: 48px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.detail-add-button:hover {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(232, 93, 50, 0.12);
+}
+
+.detail-add-button:hover::after {
+    transform: translateX(3px);
+}
+
+.detail-add-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
