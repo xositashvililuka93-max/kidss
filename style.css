@@ -159,8 +159,6 @@ button {
     margin: 5px 0;
 }
 
-/* Hero */
-
 .hero {
     max-width: 1280px;
     margin: auto;
@@ -399,8 +397,6 @@ button {
     right: -30px;
 }
 
-/* Benefits */
-
 .benefit-row {
     max-width: 1210px;
     margin: 0 auto 90px;
@@ -446,8 +442,6 @@ button {
     color: var(--muted);
     margin-top: 3px;
 }
-
-/* Offers */
 
 .offers-section,
 .section-wrap {
@@ -558,8 +552,6 @@ button {
 .offer-xiaomi {
     font-size: 160px;
 }
-
-/* Catalog */
 
 .catalog {
     padding-top: 10px;
@@ -730,10 +722,8 @@ button {
     font-size: 14px;
 }
 
-/* Brands */
-
 .brand-strip {
-    padding: 45px 25px;
+    padding: 48px 25px;
     background: white;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -749,23 +739,69 @@ button {
 }
 
 .brand-list {
-    max-width: 750px;
-    margin: 23px auto 0;
+    max-width: 850px;
+    margin: 28px auto 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
 }
 
-.brand-list span {
-    color: #777770;
+.brand-logo {
+    min-width: 145px;
+    min-height: 55px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: #777;
+    filter: grayscale(100%);
+    opacity: 0.55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 21px;
     font-weight: 900;
     letter-spacing: 2px;
+    transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
-/* About */
+.brand-logo:hover,
+.brand-logo.active {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-4px);
+    background: #f8f7f4;
+    border-color: var(--border);
+}
+
+.apple-brand {
+    color: #171717;
+}
+
+.samsung-brand {
+    color: #1428a0;
+}
+
+.xiaomi-brand {
+    color: #ff6900;
+    font-style: italic;
+}
+
+.all-brands {
+    font-size: 11px;
+    letter-spacing: 0;
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.all-brands:hover,
+.all-brands.active {
+    color: white;
+    background: var(--accent);
+    border-color: var(--accent);
+}
 
 .about-section {
     max-width: 1280px;
@@ -827,8 +863,6 @@ button {
     color: var(--accent);
 }
 
-/* Footer */
-
 .site-footer {
     background: var(--dark);
     color: white;
@@ -885,8 +919,6 @@ button {
     color: #92928b;
     font-size: 10px;
 }
-
-/* Cart */
 
 .cart-overlay {
     position: fixed;
@@ -1067,8 +1099,6 @@ button {
     margin-top: 10px;
 }
 
-/* Product detail page */
-
 .breadcrumbs {
     max-width: 1210px;
     margin: 30px auto;
@@ -1193,8 +1223,6 @@ button {
     font-weight: 800;
     margin-top: 30px;
 }
-
-/* Responsive */
 
 @media (max-width: 1000px) {
     .hero {
@@ -1411,11 +1439,13 @@ button {
     }
 
     .brand-list {
-        gap: 20px;
+        gap: 10px;
     }
 
-    .brand-list span {
-        font-size: 16px;
+    .brand-logo {
+        min-width: 125px;
+        font-size: 17px;
+        padding: 10px;
     }
 
     .products-grid {

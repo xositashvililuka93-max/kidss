@@ -300,25 +300,45 @@ function closeCartPanel(): void {
 function setupFilters(): void {
   if (!filterButtons) return;
 
+  const brandButtons = document.querySelectorAll<HTMLButtonElement>(".brand-logo");
+
+  function applyFilter(category: string): void {
+    filterButtons?.querySelectorAll<HTMLButtonElement>(".filter-button").forEach(button => {
+      button.classList.toggle("active", button.dataset.category === category);
+    });
+
+    brandButtons.forEach(button => {
+      button.classList.toggle("active", button.dataset.brand === category);
+    });
+
+    renderProducts(category, searchInput?.value || "");
+  }
+
   filterButtons.querySelectorAll<HTMLButtonElement>(".filter-button").forEach(button => {
     button.addEventListener("click", () => {
-      filterButtons.querySelectorAll(".filter-button").forEach(item => {
-        item.classList.remove("active");
+      applyFilter(button.dataset.category || "ყველა");
+    });
+  });
+
+  brandButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.brand || "ყველა";
+
+      applyFilter(category);
+
+      document.querySelector("#catalog")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
       });
-
-      button.classList.add("active");
-
-      renderProducts(
-        button.dataset.category || "ყველა",
-        searchInput?.value || ""
-      );
     });
   });
 }
 
 searchInput?.addEventListener("input", () => {
   const activeFilter = filterButtons?.querySelector<HTMLButtonElement>(".filter-button.active");
-  renderProducts(activeFilter?.dataset.category || "ყველა", searchInput.value);
+  const category = activeFilter?.dataset.category || "ყველა";
+
+  renderProducts(category, searchInput.value);
 });
 
 cartButton?.addEventListener("click", openCart);
