@@ -689,30 +689,61 @@ button {
 
 .product-bottom {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    margin-top: 16px;
+    gap: 13px;
+    margin-top: 18px;
 }
 
 .product-price {
     font-size: 17px;
     font-weight: 900;
+    text-align: center;
 }
 
 .add-button {
-    border: none;
-    background: var(--dark);
+    width: 100%;
+    border: 1px solid var(--accent);
+    background: var(--accent);
     color: white;
-    border-radius: 7px;
-    padding: 10px 12px;
-    font-size: 10px;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 11px;
     font-weight: 800;
-    transition: 0.2s;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.add-button::after {
+    content: "→";
+    font-size: 14px;
+    transition: transform 0.25s ease;
 }
 
 .add-button:hover {
-    background: var(--accent);
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(232, 93, 50, 0.12);
+}
+
+.add-button:hover::after {
+    transform: translateX(3px);
+}
+
+.add-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.add-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .empty-results {
@@ -1360,7 +1391,7 @@ button {
     }
 
     .add-button {
-        padding: 9px;
+        padding: 10px 8px;
         font-size: 9px;
     }
 
@@ -1454,15 +1485,6 @@ button {
 
     .product-image {
         height: 150px;
-    }
-
-    .product-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .add-button {
-        width: 100%;
     }
 
     .footer-main {
