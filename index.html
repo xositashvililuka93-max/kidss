@@ -4,78 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOBI — ტელეფონების მაღაზია</title>
+    <meta name="description" content="აღმოაჩინე უახლესი სმარტფონები საუკეთესო ფასად.">
+    <title>KIDSS | Smartphone Store</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body data-page="home">
 
     <div class="top-strip">
-        უფასო მიწოდება საქართველოს მასშტაბით
+        <p>უფასო მიწოდება 300₾-ზე მეტი შენაძენისას</p>
     </div>
 
     <header class="site-header">
         <div class="header-main">
-            <a href="index.html" class="logo">MO<span>BI</span></a>
+            <a href="index.html" class="logo">KIDSS<span>.</span></a>
 
             <nav class="main-nav" id="navigation">
-                <a href="index.html">მთავარი</a>
+                <a href="index.html" class="active">მთავარი</a>
                 <a href="#catalog">ტელეფონები</a>
+                <a href="#offers">შეთავაზებები</a>
                 <a href="#about">ჩვენ შესახებ</a>
             </nav>
 
             <div class="header-actions">
                 <button class="cart-trigger" id="cartButton" type="button">
-                    კალათა
-                    <span id="cartCount">0</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M3 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"/>
+                        <circle cx="10" cy="20" r="1"/>
+                        <circle cx="18" cy="20" r="1"/>
+                    </svg>
+                    <span>კალათა</span>
+                    <span class="cart-count" id="cartCount">0</span>
                 </button>
 
-                <button class="menu-trigger" id="menuButton" type="button">☰</button>
+                <button class="menu-trigger" id="menuButton" type="button" aria-label="მენიუს გახსნა">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
+
         <section class="hero">
             <div class="hero-copy">
-                <p class="eyebrow">აღმოაჩინე ახალი შესაძლებლობები</p>
-                <h1>ტექნოლოგია შენს ხელში</h1>
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    ახალი კოლექცია 2026
+                </div>
+
+                <h1>
+                    ტექნოლოგია,
+                    <span>რომელიც</span>
+                    შენს სტილს უხდება.
+                </h1>
+
                 <p class="hero-description">
-                    აღმოაჩინე უახლესი სმარტფონები, შეარჩიე სასურველი მოდელი
-                    და მიიღე ხარისხიანი ტექნოლოგია საუკეთესო ფასად.
+                    აღმოაჩინე უახლესი სმარტფონები, თანამედროვე დიზაინი
+                    და ტექნოლოგიები, რომლებიც ყოველდღიურობას უკეთესს ხდის.
                 </p>
-                <a href="#catalog" class="primary-link">
-                    ტელეფონების ნახვა <span>→</span>
-                </a>
+
+                <div class="hero-buttons">
+                    <a href="#catalog" class="primary-link">
+                        ტელეფონების ნახვა
+                        <span>↗</span>
+                    </a>
+                    <a href="#offers" class="secondary-link">შეთავაზებები</a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <strong>100%</strong>
+                        <span>ორიგინალი პროდუქცია</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <strong>24/7</strong>
+                        <span>მომხმარებლის მხარდაჭერა</span>
+                    </div>
+                </div>
             </div>
 
             <div class="hero-visual">
-                <div class="hero-caption">MOBI — YOUR NEXT PHONE</div>
+                <div class="hero-image-frame">
+                    <img src="img/hero.jpg" alt="გოგონა თეთრი iPhone-ით">
+
+                    <div class="hero-image-label">
+                        <span class="label-dot"></span>
+                        ახალი კოლექცია
+                    </div>
+                </div>
+
+                <div class="hero-floating-card floating-card-top">
+                    <div class="floating-icon">✦</div>
+                    <div>
+                        <strong>ახალი დიზაინი</strong>
+                        <span>შეარჩიე შენი სტილი</span>
+                    </div>
+                </div>
+
+                <div class="hero-floating-card floating-card-bottom">
+                    <div class="floating-icon orange-icon">↗</div>
+                    <div>
+                        <strong>საუკეთესო არჩევანი</strong>
+                        <span>აღმოაჩინე სიახლეები</span>
+                    </div>
+                </div>
+
+                <div class="hero-decoration"></div>
             </div>
         </section>
 
         <section class="benefit-row">
-            <div>
-                <span>01</span>
-                <p>ხარისხიანი პროდუქცია</p>
+            <div class="benefit-item">
+                <div class="benefit-icon">↗</div>
+                <div>
+                    <strong>სწრაფი მიწოდება</strong>
+                    <span>შენი შეკვეთა დროულად</span>
+                </div>
             </div>
-            <div>
-                <span>02</span>
-                <p>მარტივი და სწრაფი შეკვეთა</p>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">✓</div>
+                <div>
+                    <strong>გარანტია</strong>
+                    <span>სანდო და ხარისხიანი პროდუქცია</span>
+                </div>
             </div>
-            <div>
-                <span>03</span>
-                <p>მიწოდება მთელი საქართველოს მასშტაბით</p>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">◇</div>
+                <div>
+                    <strong>უსაფრთხო შენაძენი</strong>
+                    <span>მარტივი შოპინგი</span>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">♡</div>
+                <div>
+                    <strong>მომხმარებლის მხარდაჭერა</strong>
+                    <span>ყოველთვის შენ გვერდით</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="offers-section" id="offers">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">სპეციალური შეთავაზებები</p>
+                    <h2>შეარჩიე შენი შემდეგი ტელეფონი</h2>
+                </div>
+                <a href="#catalog" class="text-link">ყველა პროდუქტი ↗</a>
+            </div>
+
+            <div class="offers-grid">
+                <a href="#catalog" class="offer-card offer-dark">
+                    <div class="offer-content">
+                        <span class="offer-tag">APPLE COLLECTION</span>
+                        <h3>შენი შემდეგი<br>iPhone აქ გელოდება.</h3>
+                        <span class="offer-link">აღმოაჩინე ↗</span>
+                    </div>
+                    <div class="offer-decoration offer-apple"></div>
+                </a>
+
+                <a href="#catalog" class="offer-card offer-orange">
+                    <div class="offer-content">
+                        <span class="offer-tag">SAMSUNG SERIES</span>
+                        <h3>ახალი შესაძლებლობები<br>ყოველდღე.</h3>
+                        <span class="offer-link">აღმოაჩინე ↗</span>
+                    </div>
+                    <div class="offer-decoration offer-samsung">S</div>
+                </a>
+
+                <a href="#catalog" class="offer-card offer-light">
+                    <div class="offer-content">
+                        <span class="offer-tag">XIAOMI COLLECTION</span>
+                        <h3>ტექნოლოგია<br>ახალი პერსპექტივით.</h3>
+                        <span class="offer-link">აღმოაჩინე ↗</span>
+                    </div>
+                    <div class="offer-decoration offer-xiaomi">X</div>
+                </a>
             </div>
         </section>
 
         <section class="catalog section-wrap" id="catalog">
             <div class="section-heading">
                 <div>
-                    <p class="eyebrow">MOBI COLLECTION</p>
-                    <h2>ჩვენი ტელეფონები</h2>
+                    <p class="eyebrow">ჩვენი არჩევანი</p>
+                    <h2>პოპულარული ტელეფონები</h2>
+                    <p class="section-subtitle">იპოვე მოწყობილობა, რომელიც შენს საჭიროებებს შეესაბამება.</p>
                 </div>
-                <p class="catalog-count">აირჩიე სასურველი სმარტფონი</p>
+                <span class="catalog-count">ჩვენი კოლექცია</span>
             </div>
 
             <div class="catalog-tools">
@@ -89,39 +211,87 @@
                 <input
                     type="search"
                     id="searchInput"
+                    class="search-input"
                     placeholder="მოძებნე ტელეფონი..."
+                    aria-label="ტელეფონის ძებნა"
                 >
             </div>
 
             <div class="products-grid" id="productsGrid"></div>
 
             <p class="empty-results" id="emptyMessage" hidden>
-                პროდუქტი ვერ მოიძებნა.
+                სამწუხაროდ, შესაბამისი პროდუქტი ვერ მოიძებნა.
             </p>
         </section>
 
         <section class="brand-strip">
-            <p class="eyebrow">ხელმისაწვდომი ბრენდები</p>
-            <div>
+            <p>ბრენდები, რომლებსაც ვენდობით</p>
+            <div class="brand-list">
                 <span>APPLE</span>
                 <span>SAMSUNG</span>
                 <span>XIAOMI</span>
             </div>
         </section>
 
-        <section class="about-section section-wrap" id="about">
-            <h2>შენი ტექნოლოგიური არჩევანი იწყება MOBI-ში.</h2>
-            <p>
-                MOBI გთავაზობს სხვადასხვა ბრენდის სმარტფონებს.
-                ჩვენი მიზანია, მარტივად იპოვო შენთვის სასურველი
-                ტელეფონი და მიიღო კომფორტული ონლაინ შოპინგის გამოცდილება.
-            </p>
+        <section class="about-section" id="about">
+            <div class="about-copy">
+                <p class="eyebrow">რატომ KIDSS?</p>
+                <h2>ტექნოლოგია მარტივი არჩევანით.</h2>
+                <p>
+                    ჩვენი მიზანია დაგეხმაროთ სასურველი სმარტფონის შერჩევაში.
+                    ჩვენთან იპოვი თანამედროვე მოწყობილობებს, მარტივ მომსახურებას
+                    და სასიამოვნო ონლაინ შოპინგის გამოცდილებას.
+                </p>
+                <a href="#catalog" class="primary-link">აღმოაჩინე კოლექცია <span>↗</span></a>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-card">
+                    <strong>03</strong>
+                    <span>პოპულარული ბრენდი</span>
+                </div>
+                <div class="stat-card">
+                    <strong>08+</strong>
+                    <span>მოდელი კოლექციაში</span>
+                </div>
+                <div class="stat-card">
+                    <strong>100%</strong>
+                    <span>შოპინგის კომფორტი</span>
+                </div>
+                <div class="stat-card stat-highlight">
+                    <strong>♡</strong>
+                    <span>შექმნილია შენთვის</span>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <footer class="site-footer">
-        <a href="index.html" class="logo">MO<span>BI</span></a>
-        <p>© 2026 MOBI. ყველა უფლება დაცულია.</p>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">KIDSS<span>.</span></a>
+                <p>აღმოაჩინე ტექნოლოგიები, რომლებიც შენს ყოველდღიურობას უკეთესს ხდის.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>ნავიგაცია</h3>
+                <a href="index.html">მთავარი</a>
+                <a href="#catalog">ტელეფონები</a>
+                <a href="#offers">შეთავაზებები</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>ინფორმაცია</h3>
+                <a href="#about">ჩვენ შესახებ</a>
+                <a href="#catalog">კოლექცია</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 KIDSS. ყველა უფლება დაცულია.</span>
+            <span>შექმნილია ტექნოლოგიების მოყვარულებისთვის.</span>
+        </div>
     </footer>
 
     <div class="cart-overlay" id="cartOverlay"></div>
@@ -129,10 +299,10 @@
     <aside class="cart-panel" id="cartPanel">
         <div class="cart-header">
             <div>
-                <p class="eyebrow">MOBI SHOPPING</p>
+                <p class="eyebrow">შენი არჩევანი</p>
                 <h2>შენი კალათა</h2>
             </div>
-            <button class="close-cart" id="closeCart" type="button">×</button>
+            <button class="close-cart" id="closeCart" type="button" aria-label="კალათის დახურვა">×</button>
         </div>
 
         <div class="cart-items" id="cartItems"></div>
@@ -142,12 +312,11 @@
                 <span>ჯამური ღირებულება</span>
                 <strong id="cartTotal">0 ₾</strong>
             </div>
-
             <button class="checkout-button" id="checkoutButton" type="button">
                 შეკვეთის გაფორმება
+                <span>↗</span>
             </button>
-
-            <p class="checkout-message" id="checkoutMessage"></p>
+            <p id="checkoutMessage" class="checkout-message"></p>
         </div>
     </aside>
 
