@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOBI — ტელეფონების მაღაზია</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+
+    <div class="top-strip">
+        უფასო მიწოდება საქართველოს მასშტაბით
+    </div>
+
+    <header class="site-header">
+        <div class="header-main">
+            <a href="index.html" class="logo">MO<span>BI</span></a>
+
+            <nav class="main-nav" id="navigation">
+                <a href="index.html">მთავარი</a>
+                <a href="#catalog">ტელეფონები</a>
+                <a href="#about">ჩვენ შესახებ</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-trigger" id="cartButton" type="button">
+                    კალათა
+                    <span id="cartCount">0</span>
+                </button>
+
+                <button class="menu-trigger" id="menuButton" type="button">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">აღმოაჩინე ახალი შესაძლებლობები</p>
+                <h1>ტექნოლოგია შენს ხელში</h1>
+                <p class="hero-description">
+                    აღმოაჩინე უახლესი სმარტფონები, შეარჩიე სასურველი მოდელი
+                    და მიიღე ხარისხიანი ტექნოლოგია საუკეთესო ფასად.
+                </p>
+                <a href="#catalog" class="primary-link">
+                    ტელეფონების ნახვა <span>→</span>
+                </a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-caption">MOBI — YOUR NEXT PHONE</div>
+            </div>
+        </section>
+
+        <section class="benefit-row">
+            <div>
+                <span>01</span>
+                <p>ხარისხიანი პროდუქცია</p>
+            </div>
+            <div>
+                <span>02</span>
+                <p>მარტივი და სწრაფი შეკვეთა</p>
+            </div>
+            <div>
+                <span>03</span>
+                <p>მიწოდება მთელი საქართველოს მასშტაბით</p>
+            </div>
+        </section>
+
+        <section class="catalog section-wrap" id="catalog">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">MOBI COLLECTION</p>
+                    <h2>ჩვენი ტელეფონები</h2>
+                </div>
+                <p class="catalog-count">აირჩიე სასურველი სმარტფონი</p>
+            </div>
+
+            <div class="catalog-tools">
+                <div class="filters" id="filterButtons">
+                    <button class="filter-button active" data-category="ყველა" type="button">ყველა</button>
+                    <button class="filter-button" data-category="Apple" type="button">Apple</button>
+                    <button class="filter-button" data-category="Samsung" type="button">Samsung</button>
+                    <button class="filter-button" data-category="Xiaomi" type="button">Xiaomi</button>
+                </div>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="მოძებნე ტელეფონი..."
+                >
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+
+            <p class="empty-results" id="emptyMessage" hidden>
+                პროდუქტი ვერ მოიძებნა.
+            </p>
+        </section>
+
+        <section class="brand-strip">
+            <p class="eyebrow">ხელმისაწვდომი ბრენდები</p>
+            <div>
+                <span>APPLE</span>
+                <span>SAMSUNG</span>
+                <span>XIAOMI</span>
+            </div>
+        </section>
+
+        <section class="about-section section-wrap" id="about">
+            <h2>შენი ტექნოლოგიური არჩევანი იწყება MOBI-ში.</h2>
+            <p>
+                MOBI გთავაზობს სხვადასხვა ბრენდის სმარტფონებს.
+                ჩვენი მიზანია, მარტივად იპოვო შენთვის სასურველი
+                ტელეფონი და მიიღო კომფორტული ონლაინ შოპინგის გამოცდილება.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html" class="logo">MO<span>BI</span></a>
+        <p>© 2026 MOBI. ყველა უფლება დაცულია.</p>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">MOBI SHOPPING</p>
+                <h2>შენი კალათა</h2>
+            </div>
+            <button class="close-cart" id="closeCart" type="button">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>ჯამური ღირებულება</span>
+                <strong id="cartTotal">0 ₾</strong>
+            </div>
+
+            <button class="checkout-button" id="checkoutButton" type="button">
+                შეკვეთის გაფორმება
+            </button>
+
+            <p class="checkout-message" id="checkoutMessage"></p>
+        </div>
+    </aside>
+
+</body>
+</html>

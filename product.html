@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პროდუქტის დეტალები — MOBI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="product">
+
+    <div class="top-strip">
+        უფასო მიწოდება საქართველოს მასშტაბით
+    </div>
+
+    <header class="site-header">
+        <div class="header-main">
+            <a href="index.html" class="logo">MO<span>BI</span></a>
+
+            <nav class="main-nav" id="navigation">
+                <a href="index.html">მთავარი</a>
+                <a href="index.html#catalog">ტელეფონები</a>
+                <a href="index.html#about">ჩვენ შესახებ</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-trigger" id="cartButton" type="button">
+                    კალათა
+                    <span id="cartCount">0</span>
+                </button>
+
+                <button class="menu-trigger" id="menuButton" type="button">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page section-wrap">
+
+        <div class="breadcrumbs">
+            <a href="index.html">მთავარი</a>
+            <span>/</span>
+            <a href="index.html#catalog">ტელეფონები</a>
+            <span>/</span>
+            <span id="breadcrumbName">პროდუქტი</span>
+        </div>
+
+        <section class="product-detail">
+            <div class="detail-image">
+                <img id="detailImage" src="" alt="ტელეფონი">
+            </div>
+
+            <div class="detail-info">
+                <p class="eyebrow" id="detailBrand">ბრენდი</p>
+
+                <h1 id="detailName">პროდუქტის სახელი</h1>
+
+                <p class="detail-description" id="detailDescription"></p>
+
+                <p class="detail-price" id="detailPrice"></p>
+
+                <p class="detail-stock">
+                    <span></span> მარაგშია
+                </p>
+
+                <button class="detail-add-button" id="detailAddButton" type="button">
+                    კალათაში დამატება
+                </button>
+
+                <p class="detail-notice" id="detailNotice"></p>
+
+                <div class="detail-extra">
+                    <p>✓ ხარისხიანი პროდუქცია</p>
+                    <p>✓ უსაფრთხო შეკვეთა</p>
+                    <p>✓ სწრაფი მიწოდება</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="specifications">
+            <h2>ტექნიკური მახასიათებლები</h2>
+            <div class="spec-list" id="specList"></div>
+        </section>
+
+        <a href="index.html#catalog" class="back-link">← მაღაზიაში დაბრუნება</a>
+
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html" class="logo">MO<span>BI</span></a>
+        <p>© 2026 MOBI. ყველა უფლება დაცულია.</p>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">MOBI SHOPPING</p>
+                <h2>შენი კალათა</h2>
+            </div>
+            <button class="close-cart" id="closeCart" type="button">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>ჯამური ღირებულება</span>
+                <strong id="cartTotal">0 ₾</strong>
+            </div>
+
+            <button class="checkout-button" id="checkoutButton" type="button">
+                შეკვეთის გაფორმება
+            </button>
+
+            <p class="checkout-message" id="checkoutMessage"></p>
+        </div>
+    </aside>
+
+</body>
+</html>
